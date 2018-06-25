@@ -1,9 +1,9 @@
 pragma solidity ^0.4.24;
 
-import "ERC20Interface.sol";
-import "ERC223Interface.sol";
-import "ERC223ReceivingContract.sol";
-import "SafeMath.sol";
+import "./ERC20Interface.sol";
+import "./ERC223Interface.sol";
+import "./ERC223ReceivingContract.sol";
+import "./SafeMath.sol";
 
 
 // @title StandardToken - base token contract

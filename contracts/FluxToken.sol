@@ -1,9 +1,9 @@
 pragma solidity ^0.4.24;
 
-import "StandardToken.sol";
-import "SafeMath.sol";
-import "Ownable.sol";
-import "Pausable.sol";
+import "./StandardToken.sol";
+import "./SafeMath.sol";
+import "./Ownable.sol";
+
 
 /// @title  FluxToken
 contract FluxToken is Ownable, StandardToken {
@@ -28,7 +28,6 @@ contract FluxToken is Ownable, StandardToken {
   * Public Functions
   */
   /// @dev Contract constructor function
-  /// @param _owner_address Address of owners wallet.
   /// @param _supply Number of initially provided token
   constructor(uint _supply) public {
 
