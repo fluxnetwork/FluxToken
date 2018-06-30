@@ -28,12 +28,14 @@ contract FluxToken is Ownable, StandardToken {
   * Public Functions
   */
   /// @dev Contract constructor function
+  /// @param _owner Address of owners wallet.
   /// @param _supply Number of initially provided token
-  constructor(uint _supply) public {
+  constructor(address _owner, uint _supply) public {
 
+    require(_owner != 0x0);
     totalSupply = _supply;
-    balances[msg.sender] = _supply;
-    emit Transfer(0x0, msg.sender, balances[msg.sender]);
+    balances[_owner] = _supply;
+    emit Transfer(0x0, _owner, balances[_owner]);
 
   }
 
