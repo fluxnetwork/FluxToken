@@ -64,9 +64,9 @@ contract('FluxToken', function ([_, owner, recipient, anotherAccount]) {
 
           assert.equal(logs.length, 1);
           assert.equal(logs[0].event, 'Transfer');
-          assert.equal(logs[0].args.from, owner);
-          assert.equal(logs[0].args.to, to);
-          assert(logs[0].args.value.eq(amount));
+          assert.equal(logs[0].args._from, owner);
+          assert.equal(logs[0].args._to, to);
+          assert(logs[0].args._value.eq(amount));
         });
       });
     });
@@ -92,9 +92,9 @@ contract('FluxToken', function ([_, owner, recipient, anotherAccount]) {
 
           assert.equal(logs.length, 1);
           assert.equal(logs[0].event, 'Approval');
-          assert.equal(logs[0].args.owner, owner);
-          assert.equal(logs[0].args.spender, spender);
-          assert(logs[0].args.value.eq(amount));
+          assert.equal(logs[0].args._tokenOwner, owner);
+          assert.equal(logs[0].args._spender, spender);
+          assert(logs[0].args._value.eq(amount));
         });
 
         describe('when there was no approved amount before', function () {
@@ -128,9 +128,9 @@ contract('FluxToken', function ([_, owner, recipient, anotherAccount]) {
 
           assert.equal(logs.length, 1);
           assert.equal(logs[0].event, 'Approval');
-          assert.equal(logs[0].args.owner, owner);
-          assert.equal(logs[0].args.spender, spender);
-          assert(logs[0].args.value.eq(amount));
+          assert.equal(logs[0].args._tokenOwner, owner);
+          assert.equal(logs[0].args._spender, spender);
+          assert(logs[0].args._value.eq(amount));
         });
 
         describe('when there was no approved amount before', function () {
@@ -173,9 +173,9 @@ contract('FluxToken', function ([_, owner, recipient, anotherAccount]) {
 
         assert.equal(logs.length, 1);
         assert.equal(logs[0].event, 'Approval');
-        assert.equal(logs[0].args.owner, owner);
-        assert.equal(logs[0].args.spender, spender);
-        assert(logs[0].args.value.eq(amount));
+        assert.equal(logs[0].args._tokenOwner, owner);
+        assert.equal(logs[0].args._spender, spender);
+        assert(logs[0].args._value.eq(amount));
       });
     });
   });
@@ -216,9 +216,9 @@ contract('FluxToken', function ([_, owner, recipient, anotherAccount]) {
 
             assert.equal(logs.length, 1);
             assert.equal(logs[0].event, 'Transfer');
-            assert.equal(logs[0].args.from, owner);
-            assert.equal(logs[0].args.to, to);
-            assert(logs[0].args.value.eq(amount));
+            assert.equal(logs[0].args._from, owner);
+            assert.equal(logs[0].args._to, to);
+            assert(logs[0].args._value.eq(amount));
           });
         });
 
