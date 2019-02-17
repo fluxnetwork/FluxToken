@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 
 // ----------------------------------------------------------------------------
@@ -8,6 +8,6 @@ pragma solidity ^0.4.24;
 contract ERC223Interface {
     function transfer(address _to, uint _value, bytes _data) public returns (bool success);
 
-  
+
     event Transfer(address indexed _from, address indexed _to, uint _value, bytes _data);
 }
